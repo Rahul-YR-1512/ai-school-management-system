@@ -1,1 +1,6 @@
+def retrieve_context(query):
+    return "Relevant textbook content"
 
+def generate_answer(query):
+    context = retrieve_context(query)
+    return f"Answer based on curriculum: {context}"
