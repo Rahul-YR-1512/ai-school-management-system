@@ -1,1 +1,29 @@
+import React, { useEffect, useState } from "react";
+
+function App() {
+  const [stats, setStats] = useState(null);
+
+  // Mock backend + AI analytics
+  useEffect(() => {
+    setStats({
+      classes: 5,
+      students: 180,
+      pendingAssignments: 12,
+      avgScore: 78,
+      aiInsight: "Students need more practice in Algebra",
+      adminTimeSaved: "50%"
+    });
+  }, []);
+
+  if (!stats) {
+    return <h3 style={{ padding: "20px" }}>Loading Teacher Dashboard...</h3>;
+  }
+
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.title}>Teacher Dashboard</h1>
+
+      <div style={styles.grid}>
+        <Card title="Classes" value={stats.classes} />
+        <Card title="
 
