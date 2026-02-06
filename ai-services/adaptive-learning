@@ -1,1 +1,9 @@
+def learning_path(score):
+    if score < 40:
+        return "Basic"
+    elif score < 75:
+        return "Intermediate"
+    return "Advanced"
 
+if __name__ == "__main__":
+    print(learning_path(68))
