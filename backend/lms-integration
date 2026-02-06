@@ -1,1 +1,17 @@
+class LMSIntegration:
+    def fetch_courses(self, lms_name):
+        if lms_name.lower() == "moodle":
+            return ["Maths", "Science", "English"]
+        elif lms_name.lower() == "canvas":
+            return ["AI Basics", "Data Science"]
+        else:
+            return []
 
+    def sync_grades(self, student_id):
+        return {
+            "student_id": student_id,
+            "grades": {
+                "Maths": 85,
+                "Science": 90
+            }
+        }
