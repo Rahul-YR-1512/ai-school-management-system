@@ -1,1 +1,12 @@
+from fastapi import FastAPI
 
+app = FastAPI(title="SIS Service")
+
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    return {
+        "id": student_id,
+        "name": "Sample Student",
+        "attendance": "92%",
+        "performance": "Above Average"
+    }
