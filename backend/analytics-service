@@ -1,1 +1,7 @@
+def performance_summary(student_scores):
+    avg = sum(student_scores) / len(student_scores)
+    return {
+        "average_score": avg,
+        "status": "Improving" if avg > 70 else "Needs Attention"
+    }
 
