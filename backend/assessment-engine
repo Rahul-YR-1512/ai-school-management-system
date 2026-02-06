@@ -1,1 +1,15 @@
+def grade_mcq(correct_answers, student_answers):
+    score = 0
+    for q, ans in correct_answers.items():
+        if student_answers.get(q) == ans:
+            score += 1
+    return {
+        "score": score,
+        "total": len(correct_answers)
+    }
+
+def grade_short_answer(expected, response):
+    if expected.lower() in response.lower():
+        return "Correct"
+    return "Partially Correct"
 
