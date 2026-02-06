@@ -1,1 +1,9 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Management System</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
